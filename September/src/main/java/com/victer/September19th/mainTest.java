@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class mainTest {
     public static void main(String[] args) {
-        System.out.println(integerBreak(3));
+        System.out.println(integerBreak1(10));
     }
     public static int integerBreak(int n) {
         if(n == 2){
@@ -24,5 +24,24 @@ public class mainTest {
         }
 
         return arr[n];
+    }
+    public static int integerBreak1(int n) {
+        if(n < 3){
+            return n - 1;
+        }
+        int [] dp = new int[n + 1];
+        dp[2] = 1;
+        for(int i = 3 ; i <= n ; i++){
+            dp[i] = Math.max(Math.max(2 * (i - 2) , 2 * dp[i - 2] ) , Math.max(3 * (i - 3) , 3 * dp[i - 3] ));
+        }
+        return dp[n];
+    }
+    public static int integerBreak2(int n){
+        if(n <= 3){
+            return n - 1;
+        }
+        int quotient = n / 3;
+
+        return 0;
     }
 }
