@@ -4,9 +4,28 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class mainTest {
+    private static int test ;
     public static void main(String[] args) {
-        System.out.println(integerBreak1(10));
+//        System.out.println(integerBreak1(10));
+//        test += fun(1);
+//        System.out.println(test);
+
+        System.out.println();
     }
+    public static int fun(int num){
+        test += num;
+        System.out.println(test);
+        return num;
+    }
+    public static void fun1(){
+        test += 1;
+        System.out.println(test);
+    }
+    public static void fun2(){
+        test += 1;
+        System.out.println(test);
+    }
+
     public static int integerBreak(int n) {
         if(n == 2){
             return 1;
